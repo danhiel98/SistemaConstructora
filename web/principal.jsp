@@ -16,9 +16,9 @@
         <script src="src/js/all.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-fixed-top ">
+        <nav class="navbar navbar-inverse navbar-fixed-top ">
                 
-                    <div class="container-fluid bg-primary text-white">
+                    <div class="container-fluid">
                       <!-- Brand and toggle get grouped for better mobile display -->
                       <div class="navbar-header">
                         <span class="navbar-brand text-white">SAC</span>
@@ -27,13 +27,13 @@
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse  text-white" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">Link</a></li>
-                          <li><a href="#">Link</a></li>
+                            <li><a href="#">Clientes</a></li>
+                          <li><a href="#">Proveedores</a></li>
                           <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                              <li><a href="#">Action</a></li>
-                              <li><a href="#">Another action</a></li>
+                              <li><a href="#">Cotización</a></li>
+                              <li><a href="#">Otra</a></li>
                               
                             </ul>
                           </li>
