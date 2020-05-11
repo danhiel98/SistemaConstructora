@@ -1,9 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 05-02-2020, 12:01:17 AM
-    Author     : Adonay Campos
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,40 +10,24 @@
         <script src="src/js/all.js"></script>
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top ">
-                
-                    <div class="container-fluid">
-                      <!-- Brand and toggle get grouped for better mobile display -->
-                      <div class="navbar-header">
-                        <span class="navbar-brand text-white">SAC</span>
-                      </div>
-
-                      <!-- Collect the nav links, forms, and other content for toggling -->
-                      <div class="collapse navbar-collapse  text-white" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#">Clientes</a></li>
-                          <li><a href="#">Proveedores</a></li>
-                          <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opciones <span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                              <li><a href="#">Cotización</a></li>
-                              <li><a href="#">Otra</a></li>
-                              
-                            </ul>
-                          </li>
-                        </ul>
-                        
-                        
-                      </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
-                
-        </nav>
-        <div class="container-fluid">
+        <%@ include file="barra.jsp" %>
+        <div class="container" style="margin-top: 100px;">
             <div class="row">
+                <h1 class="text-center">Bienvenido al Sistema de Administración de Constructoras</h1>
+            </div>
+            <div class="row" style="margin-top: 100px;">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <a href="usuario_v.jsp" type="button" class="btn btn-primary btn-lg btn-block">Ver Usuarios</a>
+                   
+                </div>
+                
+                <div class="col-md-4">
+                     <a type="button" class="btn btn-success btn-lg btn-block">Ver Proyectos</a>
+                </div>
+                <div class="col-md-2"></div>
                 
             </div>
-            
-            
         </div>
     </body>
     <script src="src/js/sweetalert.min.js"></script>
