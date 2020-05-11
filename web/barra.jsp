@@ -9,12 +9,12 @@
                       <!-- Collect the nav links, forms, and other content for toggling -->
                       <div class="collapse navbar-collapse  text-white" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            
+                          <li><a href="principal.jsp">Inicio</a></li>  
                           <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Usuarios <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                               <li><a href="usuario_v.jsp">Ver Usuarios</a></li>
-                              <li><a href="#">Nuevo Usuario</a></li>
+                              <li><a href="usuario_new.jsp">Nuevo Usuario</a></li>
                               
                             </ul>
                           </li>
