@@ -35,7 +35,7 @@
                                 <li><a href="#">Ver Proyectos</a></li>
                                
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">Cerrar Sesión</a></li>
+                                <li><a href="index.jsp">Cerrar Sesión</a></li>
                               </ul>
                             </li>
                           </ul>
