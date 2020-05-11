@@ -50,7 +50,7 @@
                             <td>Hidraulico</td>
                             <td>cami@21</td>
                             <td>
-                                <button type="button" class="btn btn-info"><i class="fas fa-user-edit"></i></button>
+                                <a href="usuario_edit.jsp" type="button" class="btn btn-info"><i class="fas fa-user-edit"></i></a>
                             </td>
                           </tr>
                           
