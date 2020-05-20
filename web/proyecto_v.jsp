@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>SAC|Usuarios</title>
+        <title>SAC| Proyectos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie-edge">
         <link rel="stylesheet" type="text/css" href="src/css/bootstrap.min.css">
@@ -13,44 +13,32 @@
         <%@ include file="barra.jsp" %>
         <div class="container" style="margin-top: 75px;">
             <div class="row" style="margin-left: 10px;">
-                <h1>Usuarios</h1>
+                <h1>Proyectos</h1>
             </div>
             <div class="row" style="margin-top: 10px;">
                 <div class="col-md-12">
                     <table class="table table-bordered">
                         <thead>
                             <tr class="active">
-                            <th scope="col">Código</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Apellido</th>
-                            <th scope="col">Nacimiento</th>
-                            <th scope="col">Teléfono</th>
-                            <th scope="col">Dirección</th>
-                            <th scope="col">Ciudad</th>
-                            <th scope="col">Profesión</th>
-                            <th scope="col">Salario</th>
-                            <th scope="col">Fecha de Contrato</th>
-                            <th scope="col">Departamento</th>
-                            <th scope="col">Usuario</th>
+                            <th scope="col">Nº de Contrato</th>
+                            <th scope="col">Tipo Proyecto</th>
+                            <th scope="col">Fecha Inicio</th>
+                            <th scope="col">Obrero</th>
+                            <th scope="col">Encargado</th>
+                            <th scope="col">Monto de Proyecto</th>
                             <th scope="col">Opciones</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <th scope="row">CAJ1123</th>
-                            <td>Camila Abigail</td>
-                            <td>Juarez</td>
+                            <th scope="row">CEC330</th>
+                            <td>Edificación</td>
                             <td>Febrero 30, 1995</td>
-                            <td>2674-3567</td>
-                            <td>El Amatillo #45</td>
-                            <td>Ciudad Esperanza</td>
-                            <td>Supervisora</td>
-                            <td> $ 1350.00</td>
-                            <td>Junio 15, 2018</td>
-                            <td>Hidraulico</td>
-                            <td>cami@21</td>
+                            <td>Armando Paredes</td>
+                            <td>Armando Estaban Quito </td>
+                            <td> $ 13,500.00</td>
                             <td>
-                                <a href="usuario_edit.jsp" type="button" class="btn btn-info"><i class="fas fa-user-edit"></i></a>
+                                <a href="proyecto_edit.jsp" type="button" class="btn btn-info"><i class="fas fa-edit"></i></i></a>
                             </td>
                           </tr>
                           

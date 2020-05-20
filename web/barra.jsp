@@ -1,3 +1,5 @@
+<%@page import="Modelo.Usuario"%>
+<% Usuario usr = (Usuario)request.getSession().getAttribute("usuarioActivo"); %>
 <nav class="navbar navbar-inverse navbar-fixed-top ">
 
     <div class="container-fluid">
@@ -38,7 +40,7 @@
                         <li><a href="#">Ver Proyectos</a></li>
 
                         <li role="separator" class="divider"></li>
-                        <li><a href="./logout">Cerrar Sesión</a></li>
+                        <li><a href="./logout">Cerrar SesiÃ³n</a></li>
                     </ul>
                 </li>
             </ul>

@@ -1,6 +1,4 @@
-<%@page import="Modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% Usuario usr = (Usuario)request.getSession().getAttribute("usuarioActivo"); %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,7 +22,19 @@
                 </div>
                 
                 <div class="col-md-4">
-                     <a type="button" class="btn btn-success btn-lg btn-block">Ver Proyectos</a>
+                    <a href="proyecto_v.jsp" type="button" class="btn btn-success btn-lg btn-block">Ver Proyectos</a>
+                </div>
+                <div class="col-md-2"></div>
+                
+            </div>
+            <div class="row" style="margin-top: 25px;">
+                <div class="col-md-2"></div>
+                              
+                <div class="col-md-4">
+                    <a href="cliente_v.jsp" type="button" class="btn btn-info btn-lg btn-block">Ver Clientes</a>
+                </div>
+                <div class="col-md-4">
+                     
                 </div>
                 <div class="col-md-2"></div>
                 
