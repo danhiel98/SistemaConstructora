@@ -1,4 +1,6 @@
+<%@page import="Modelo.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<% Usuario usr = (Usuario)request.getSession().getAttribute("usuarioActivo"); %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,7 +21,6 @@
                 <div class="col-md-2"></div>
                 <div class="col-md-4">
                     <a href="usuario_v.jsp" type="button" class="btn btn-primary btn-lg btn-block">Ver Usuarios</a>
-                   
                 </div>
                 
                 <div class="col-md-4">

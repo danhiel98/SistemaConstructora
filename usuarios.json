@@ -1,0 +1,35 @@
+{
+	"empleados": [
+		{
+			"id": 1,
+			"nombre": "Juan",
+			"apellido": "Pineda",
+			"fechaNacimiento": "1990-05-10",
+			"telefono": "7523-1023",
+			"direccion": "San Salvador",
+			"profesion": "Administrador de empresas",
+			"salario": 700.3,
+			"fechaContrato": "2020-02-01",
+			"departamento": "Administracion"
+		},
+		{
+			"id": 2,
+			"nombre": "María",
+			"apellido": "Orellana",
+			"fechaNacimiento": "1995-07-14",
+			"telefono": "7231-0231",
+			"direccion": "La Libertad",
+			"profesion": "Arquitecto",
+			"salario": 850.9,
+			"fechaContrato": "2019-10-12",
+			"departamento": "Estructura"
+		}
+	],
+	"usuarios": [
+		{
+			"idEmpleado": 1,
+			"nombreUsuario": "juan123",
+			"clave": "clave"
+		}
+	]
+}
