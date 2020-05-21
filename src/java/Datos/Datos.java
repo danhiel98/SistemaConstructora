@@ -38,4 +38,47 @@ public class Datos implements Serializable{
     public void agregarCliente(Cliente cliente){
         this.listaClientes.add(cliente);
     }
+    
+    public Cliente obtenerCliente(String codigo) {
+        Cliente resp = null;
+        
+        for (Cliente c : this.listaClientes){
+            if (c.getCodigo().equals(codigo)){
+                resp = c;
+                break;
+            }
+        }
+        
+        return resp;
+    }
+    
+    public Cliente editarCliente(String codigo, Cliente nuevo) {
+        Cliente resp = null;
+        
+        for (Cliente c : this.listaClientes){
+            if (c.getCodigo().equals(codigo)){
+                c.setCodigo(nuevo.getCodigo());
+                c.setNombre(nuevo.getNombre());
+                c.setNombreContacto(nuevo.getNombreContacto());
+                c.setTelefonoContacto(nuevo.getTelefonoContacto());
+                c.setDireccion(nuevo.getDireccion());
+                break;
+            }
+        }
+        
+        return resp;
+    }
+    
+    public Cliente eliminarCliente(String codigo){
+        Cliente resp = null;
+        for (Cliente c : this.listaClientes ){
+            if (c.getCodigo().equals(codigo)){
+                resp = c;
+                listaClientes.remove(c);
+                break;
+            }
+        }
+        
+        return resp;
+    }
 }   

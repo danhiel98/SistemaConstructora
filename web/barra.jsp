@@ -27,7 +27,6 @@
                     <ul class="dropdown-menu">
                         <li><a href="#">Ver Proyectos</a></li>
                         <li><a href="#">Nuevo Proyecto</a></li>
-
                     </ul>
                 </li>
             </ul>
@@ -46,5 +45,4 @@
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-
 </nav>

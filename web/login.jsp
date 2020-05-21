@@ -37,7 +37,7 @@
                             <div class="form-group">
                                 <label for="usuario">Usuario</label>
                                 <input type="text" class="form-control" name="usuario" id="usuario"
-                                    placeholder="Usuario">
+                                       placeholder="Usuario" autofocus="true">
                             </div>
                             <div class="form-group">
                                 <label for="clave">Clave</label>

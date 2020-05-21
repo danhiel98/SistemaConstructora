@@ -16,35 +16,30 @@
                 <h1>Editar Registro de Cliente</h1>
             </div>
             <div class="row" style="margin-top: 0px;">
-                <form>
+                <form action="./clientes?opc=actualizar" method="POST">
+                    <input name="codigoOriginal" type="hidden" value="${ cliente.getCodigo() }" >
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="InputCodCliente">Código de Cliente</label>
-                            <input type="text" class="form-control" id="InputCodCliente" placeholder="#####">
+                            <input type="text" name="codigo" class="form-control" id="InputCodCliente" placeholder="#####" value="${ cliente.getCodigo() }">
                         </div>
                         <div class="form-group">
                             <label for="InputContacto">Contacto</label>
-                            <input type="text" class="form-control" id="InputContacto" placeholder="Contacto">
+                            <input type="text" name="contacto" class="form-control" id="InputContacto" placeholder="Contacto" value="${ cliente.getNombreContacto() }">
                         </div>
                         <div class="form-group">
                             <label for="InputDirección">Dirección</label>
-                            <input type="text" class="form-control" id="InputDirección" placeholder="Dirección">
+                            <input type="text" name="direccion" class="form-control" id="InputDirección" placeholder="Dirección" value="${ cliente.getDireccion() }">
                         </div>
-                        
-                        
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="InputNomCliente">Nombre</label>
-                            <input type="text" class="form-control" id="InputNomCliente" placeholder="Nombre">
+                            <input type="text" name="nombre" class="form-control" id="InputNomCliente" placeholder="Nombre" value="${ cliente.getNombre() }">
                         </div>
                         <div class="form-group">
                             <label for="InputTelContacto">Teléfono de Contacto</label>
-                            <input type="text" class="form-control" id="InputTelContacto" placeholder="####-####">
-                        </div>
-                        <div class="form-group">
-                            <label for="InputCiudad">Ciudad</label>
-                            <input type="text" class="form-control" id="InputCiudad" placeholder="Ciudad">
+                            <input type="text" name="telefonoContacto" class="form-control" id="InputTelContacto" placeholder="####-####" value="${ cliente.getTelefonoContacto() }">
                         </div>
                         <div class="form-group">
                             <button style="margin-top: 30px;" type="Submit" class="btn btn-primary btn-lg btn-block">Guardar Cambios</button>
