@@ -34,7 +34,7 @@
                     <a href="clientes?opc=listar" type="button" class="btn btn-info btn-lg btn-block">Ver Clientes</a>
                 </div>
                 <div class="col-md-4">
-                     
+                    <a href="empleados?opc=listar" type="button" class="btn btn-info btn-lg btn-block">Ver Empleados</a>
                 </div>
                 <div class="col-md-2"></div>
                 

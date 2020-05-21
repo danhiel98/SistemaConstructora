@@ -1,7 +1,8 @@
 package Modelo;
 
-public class Empleado {
+import Datos.Datos;
 
+public class Empleado {
     private int id;
     private String nombre;
     private String apellido;
@@ -16,7 +17,7 @@ public class Empleado {
     public int getId() {
         return id;
     }
-
+    
     public void setId(int id) {
         this.id = id;
     }
@@ -38,7 +39,7 @@ public class Empleado {
     }
     
     public String getNombreCompleto() {
-        return nombre.concat(" " + apellido);
+        return this.nombre.concat(" " + this.apellido);
     }
 
     public String getFechaNacimiento() {
