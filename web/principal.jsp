@@ -31,7 +31,7 @@
                 <div class="col-md-2"></div>
                               
                 <div class="col-md-4">
-                    <a href="cliente_v.jsp" type="button" class="btn btn-info btn-lg btn-block">Ver Clientes</a>
+                    <a href="clientes?opc=listar" type="button" class="btn btn-info btn-lg btn-block">Ver Clientes</a>
                 </div>
                 <div class="col-md-4">
                      

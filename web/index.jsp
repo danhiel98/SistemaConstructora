@@ -1,19 +1,13 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="Modelo.Usuario"%>
-<%@page import="Datos.Sesion"%>
+<%@page import="Datos.Datos"%>
 <% 
     session = request.getSession();
     
-    if (session.getAttribute("data") == null){
-        Sesion data = new Sesion();
+    if (session.getAttribute("datos") == null){
+        Datos datos = new Datos();
         
-        Usuario user;
-        user = new Usuario();
-        
-        data.setListaUsuarios(
-        new ArrayList<Usuario>() {
-
-        });
+        request.getSession().setAttribute("datos", datos);
     }
         
 

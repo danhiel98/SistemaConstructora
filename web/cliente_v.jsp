@@ -1,3 +1,6 @@
+<%@page import="Modelo.Cliente"%>
+<%@page import="java.util.ArrayList"%>
+<%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,42 +14,50 @@
     </head>
     <body>
         <%@ include file="barra.jsp" %>
+        <jsp:useBean id="datos" class="Datos.Datos" scope="session"></jsp:useBean>
+        <% ArrayList<Cliente> listaClientes = datos.getListaClientes(); %>
         <div class="container" style="margin-top: 75px;">
             <div class="row" style="margin-left: 10px;">
                 <h1>Clientes</h1>
             </div>
             <div class="row" style="margin-top: 10px;">
                 <div class="col-md-12">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr class="active">
-                            <th scope="col">Código Cliente</th>
-                            <th scope="col">Nombre</th>
-                            <th scope="col">Contacto</th>
-                            <th scope="col">Teléfono de Contacto</th>
-                            <th scope="col">Dirección</th>
-                            <th scope="col">Ciudad</th>
-                            <th scope="col">Opciones</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th scope="row">CLI007</th>
-                            <td>Music Records</td>
-                            <td>Antonia Carjolis</td>
-                            <td>4563-4564</td>
-                            <td>Avenida Juan Diaz, #34</td>
-                            <td>Versailles</td>
-                            <td>
-                                <a href="cliente_edit.jsp" type="button" class="btn btn-info"><i class="fas fa-edit"></i></a>
-                            </td>
-                          </tr>
-                          
-                        </tbody>
-                      </table>
+                    <c:choose>
+                        <c:when test="${listaClientes.size() > 0}">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr class="active">
+                                    <th scope="col">Código Cliente</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Contacto</th>
+                                    <th scope="col">Teléfono de Contacto</th>
+                                    <th scope="col">Dirección</th>
+                                    <th scope="col">Ciudad</th>
+                                    <th scope="col">Opciones</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">CLI007</th>
+                                        <td>Music Records</td>
+                                        <td>Antonia Carjolis</td>
+                                        <td>4563-4564</td>
+                                        <td>Avenida Juan Diaz, #34</td>
+                                        <td>Versailles</td>
+                                        <td>
+                                            <a href="cliente_edit.jsp" type="button" class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="alert alert-warning">
+                                No se encontraron registros
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
                 </div>
-                
-                
             </div>
         </div>
     </body>

@@ -1,6 +1,6 @@
 package Controlador.Sesion;
 
-import Datos.Sesion;
+import Datos.Datos;
 import Modelo.Departamento;
 import Modelo.Usuario;
 import java.io.BufferedReader;

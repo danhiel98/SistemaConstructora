@@ -5,13 +5,18 @@ import Modelo.Usuario;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Sesion implements Serializable{
+public class Datos implements Serializable{
     
     private ArrayList<Usuario> listaUsuarios;
     private ArrayList<Cliente> listaClientes;
 
-    public Sesion() {
-        
+    public Datos() {
+        this.listaClientes = new ArrayList<>();
+        this.listaUsuarios = new ArrayList<>();
+    }
+    
+    public int cantidadClientes() {
+        return this.listaClientes.size();
     }
 
     public ArrayList<Usuario> getListaUsuarios() {
@@ -28,5 +33,9 @@ public class Sesion implements Serializable{
 
     public void setListaClientes(ArrayList<Cliente> listaClientes) {
         this.listaClientes = listaClientes;
+    }
+    
+    public void agregarCliente(Cliente cliente){
+        this.listaClientes.add(cliente);
     }
 }   
