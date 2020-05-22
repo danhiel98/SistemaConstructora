@@ -21,25 +21,25 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="InputCodCliente">Código de Cliente</label>
-                            <input type="text" name="codigo" class="form-control" id="InputCodCliente" placeholder="#####" value="${ cliente.getCodigo() }">
+                            <input type="text" name="codigo" class="form-control" id="InputCodCliente" placeholder="#####" required minlength="3" maxlength="6" value="${ cliente.getCodigo() }">
                         </div>
                         <div class="form-group">
                             <label for="InputContacto">Contacto</label>
-                            <input type="text" name="contacto" class="form-control" id="InputContacto" placeholder="Contacto" value="${ cliente.getNombreContacto() }">
+                            <input type="text" name="contacto" class="form-control" id="InputContacto" placeholder="Contacto" required minlength="3" value="${ cliente.getNombreContacto() }">
                         </div>
                         <div class="form-group">
                             <label for="InputDirección">Dirección</label>
-                            <input type="text" name="direccion" class="form-control" id="InputDirección" placeholder="Dirección" value="${ cliente.getDireccion() }">
+                            <input type="text" name="direccion" class="form-control" id="InputDirección" placeholder="Dirección" required minlength="3" value="${ cliente.getDireccion() }">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="InputNomCliente">Nombre</label>
-                            <input type="text" name="nombre" class="form-control" id="InputNomCliente" placeholder="Nombre" value="${ cliente.getNombre() }">
+                            <input type="text" name="nombre" class="form-control" id="InputNomCliente" placeholder="Nombre" required minlength="3" maxlength="18" value="${ cliente.getNombre() }">
                         </div>
                         <div class="form-group">
                             <label for="InputTelContacto">Teléfono de Contacto</label>
-                            <input type="text" name="telefonoContacto" class="form-control" id="InputTelContacto" placeholder="####-####" value="${ cliente.getTelefonoContacto() }">
+                            <input type="text" name="telefonoContacto" class="form-control" id="InputTelContacto" placeholder="####-####" required minlength="3" maxlength="12" value="${ cliente.getTelefonoContacto() }">
                         </div>
                         <div class="form-group">
                             <button style="margin-top: 30px;" type="Submit" class="btn btn-primary btn-lg btn-block">Guardar Cambios</button>

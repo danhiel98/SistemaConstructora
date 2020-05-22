@@ -1,7 +1,7 @@
 package Controlador;
 
 import Datos.Datos;
-import Modelo.Cliente;
+import Modelo.Equipo;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -12,15 +12,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(name = "ClienteServlet", urlPatterns = {"/clientes"})
-public class ClienteServlet extends HttpServlet {
+@WebServlet(name = "EquipoServlet", urlPatterns = {"/equipo"})
+public class EquipoServlet extends HttpServlet {
     RequestDispatcher dispatcher;
     Datos datos;
     HttpSession session;
     String param;
-    Cliente cliente;
+    Equipo equipo;
     String codigoOriginal;
-    String codigo, nombre, contacto, direccion, telefonoContacto;
+    String codigo, tipo, modelo;
+    int anyo;
+    double valor;
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -47,34 +49,34 @@ public class ClienteServlet extends HttpServlet {
         
         switch (param){
             case "crear":
-                dispatcher = request.getRequestDispatcher("cliente_new.jsp");
+                dispatcher = request.getRequestDispatcher("equipo_new.jsp");
                 break;
             case "editar":
                 codigo = request.getParameter("id");
-                cliente = datos.obtenerCliente(codigo);
+                equipo = datos.obtenerEquipo(codigo);
                 
-                if (cliente == null) {
+                if (equipo == null) {
                     response.sendRedirect("clientes?opc=listar");
                     return;
                 }
                 
-                request.setAttribute("cliente", cliente);
-                dispatcher = request.getRequestDispatcher("cliente_edit.jsp");
+                request.setAttribute("equipo", equipo);
+                dispatcher = request.getRequestDispatcher("equipo_edit.jsp");
                 break;
             case "eliminar":
                 codigo = request.getParameter("id");
-                cliente = datos.eliminarCliente(codigo);
-               
-                if (cliente == null) {
-                    response.sendError(HttpServletResponse.SC_NOT_FOUND, "No se encontró el cliente a eliminar");
+                equipo = datos.eliminarEquipo(codigo);
+                
+                if (equipo == null) {
+                    response.sendError(HttpServletResponse.SC_NOT_FOUND, "No se encontró el equipo a eliminar");
                     return;
                 }
                 
-                response.sendRedirect("clientes?opc=listar");
+                response.sendRedirect("equipo?opc=listar");
                 return;
             case "listar":
             default:
-                dispatcher = request.getRequestDispatcher("cliente_v.jsp");
+                dispatcher = request.getRequestDispatcher("equipo_v.jsp");
         }
         
         dispatcher.forward(request, response);
@@ -91,49 +93,48 @@ public class ClienteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        processRequest(request, response);
         if(request.getCharacterEncoding() == null) request.setCharacterEncoding("UTF-8");
         
         session = request.getSession();
         datos = (Datos)request.getSession().getAttribute("datos");
         
-        if (request.getParameter("opc") == null) response.sendRedirect("clientes");
+        if (request.getParameter("opc") == null) response.sendRedirect("equipo");
         
         param = request.getParameter("opc");
         
         codigo = request.getParameter("codigo");
-        nombre = request.getParameter("nombre");
-        contacto  = request.getParameter("contacto");
-        direccion = request.getParameter("direccion");
-        telefonoContacto = request.getParameter("telefonoContacto");
+        tipo = request.getParameter("tipo");
+        modelo = request.getParameter("modelo");
+        anyo = Integer.parseInt(request.getParameter("anyo"));
+        valor = Double.parseDouble(request.getParameter("valor"));
         
-        cliente = new Cliente();
+        equipo = new Equipo();
         
-        cliente.setCodigo(codigo);
-        cliente.setNombre(nombre);
-        cliente.setNombreContacto(contacto);
-        cliente.setDireccion(direccion);
-        cliente.setTelefonoContacto(telefonoContacto);
+        equipo.setCodigo(codigo);
+        equipo.setTipo(tipo);
+        equipo.setModelo(modelo);
+        equipo.setAnyo(anyo);
+        equipo.setValor(valor);
         
         switch (param) {
             case "registrar":
-                datos.agregarCliente(cliente);
+                datos.agregarEquipo(equipo);
                 session.setAttribute("datos", datos);
 
-                response.sendRedirect("clientes");
+                response.sendRedirect("equipo");
                 break;
             case "actualizar":
                 codigoOriginal = request.getParameter("codigoOriginal");
-                datos.editarCliente(codigoOriginal, cliente);
+                datos.editarEquipo(codigoOriginal, equipo);
                 
-                response.sendRedirect("clientes");
+                response.sendRedirect("equipo");
                 break;
             default:
-                response.sendRedirect("clientes?opc=listar");
+                response.sendRedirect("equipo?opc=listar");
                 break;
         }
     }
-    
+
     /**
      * Returns a short description of the servlet.
      *

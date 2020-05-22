@@ -2,6 +2,7 @@ package Datos;
 
 import Modelo.Cliente;
 import Modelo.Empleado;
+import Modelo.Equipo;
 import Modelo.Usuario;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -11,11 +12,53 @@ public class Datos implements Serializable{
     private ArrayList<Empleado> listaEmpleados;
     private ArrayList<Usuario> listaUsuarios;
     private ArrayList<Cliente> listaClientes;
+    private ArrayList<Equipo> listaEquipo;
 
     public Datos() {
         this.listaEmpleados = new ArrayList<>();
         this.listaClientes = new ArrayList<>();
         this.listaUsuarios = new ArrayList<>();
+        this.listaEquipo = new ArrayList<>();
+    }
+    
+    public ArrayList<Equipo> getListaEquipo() {
+        return this.listaEquipo;
+    }
+    
+    public void agregarEquipo(Equipo equipo){
+        this.listaEquipo.add(equipo);
+    }
+    
+    public Equipo obtenerEquipo(String codigo) {
+        for (Equipo e : this.listaEquipo) if (e.getCodigo().equals(codigo)) return e;
+        
+        return null;
+    }
+    
+     public Equipo editarEquipo(String codigo, Equipo nuevo){
+        for (Equipo e : this.listaEquipo){
+            if (e.getCodigo().equals(codigo)){
+                e.setCodigo(nuevo.getCodigo());
+                e.setTipo(nuevo.getTipo());
+                e.setModelo(nuevo.getModelo());
+                e.setAnyo(nuevo.getAnyo());
+                e.setValor(nuevo.getValor());
+                return e;
+            }
+        }
+        
+        return null;
+    }
+    
+    public Equipo eliminarEquipo(String codigo){
+        for (Equipo e : this.listaEquipo ){
+            if (e.getCodigo().equals(codigo)){
+                listaEquipo.remove(e);
+                return e;
+            }
+        }
+        
+        return null;
     }
     
     public ArrayList<Empleado> getListaEmpleados() {

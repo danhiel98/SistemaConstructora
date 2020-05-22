@@ -18,12 +18,15 @@
             <div class="row" style="margin-top: 100px;">
                 <div class="col-md-2"></div>
                 <div class="col-md-4">
-                    <a href="usuario_v.jsp" type="button" class="btn btn-primary btn-lg btn-block">Ver Usuarios</a>
+                    <a href="equipo?opc=listar" type="button" class="btn btn-primary btn-lg btn-block">Ver Equipo</a>
                 </div>
                 
                 <div class="col-md-4">
-                    <a href="proyecto_v.jsp" type="button" class="btn btn-success btn-lg btn-block">Ver Proyectos</a>
+                    <a href="empleados?opc=listar" type="button" class="btn btn-success btn-lg btn-block">Ver Empleados</a>
                 </div>
+                <%-- <div class="col-md-4">
+                    <a href="proyecto_v.jsp" type="button" class="btn btn-success btn-lg btn-block">Ver Proyectos</a>
+                </div> --%>
                 <div class="col-md-2"></div>
                 
             </div>
@@ -33,9 +36,9 @@
                 <div class="col-md-4">
                     <a href="clientes?opc=listar" type="button" class="btn btn-info btn-lg btn-block">Ver Clientes</a>
                 </div>
-                <div class="col-md-4">
+                <%-- <div class="col-md-4">
                     <a href="empleados?opc=listar" type="button" class="btn btn-info btn-lg btn-block">Ver Empleados</a>
-                </div>
+                </div> --%>
                 <div class="col-md-2"></div>
                 
             </div>
