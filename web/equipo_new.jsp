@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button style="margin-top: 30px;" type="Submit" class="btn btn-success btn-lg pull-right">Registrar Empleado</button>
+                        <button style="margin-top: 30px;" type="Submit" class="btn btn-success btn-lg pull-right">Registrar Equipo</button>
                     </div>
                 </form>
             </div>

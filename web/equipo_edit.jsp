@@ -16,7 +16,7 @@
                 <h1>Editar Información del Equipo</h1>
             </div>
             <div class="row" style="margin-top: 0px;">
-                <form action="./equipo?opc=actualizar" method="POST" class="form-control">
+                <form action="./equipo?opc=actualizar" method="POST" class="form-horizontal">
                     <input name="codigoOriginal" type="hidden" value="${ equipo.getCodigo() }" >
                     <div class="form-group">
                         <div class="form-group">
